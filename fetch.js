@@ -1,6 +1,9 @@
+/*
+    <script defer>
         const root = document.getElementById("root");
         const targetFile = document.location.search.replace('?', '');
-        fetch("https://foreboo.github.io/study/" + targetFile)
+        console.log(document.location.host + document.location.pathname + targetFile);
+        fetch(document.location.pathname + targetFile)
         .then((Response) => {
             return Response.text();
         })
@@ -8,3 +11,5 @@
             root.innerHTML = data;
         });
         console.log("勉強しろ!");
+    </script>
+*/
